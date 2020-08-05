@@ -1,0 +1,23 @@
+{{> menu}}
+
+{{#unless users}}
+  <h3 class="ui center aligned message">There are no users added to the application yet. Try adding a few!</h3>
+{{/unless}}
+
+{{#if users}}
+<h3>
+  Choose a user to check its links:
+</h3>
+
+<table class="ui fixed striped table">
+  <tbody>
+    {{#each users}}
+      <tr class="fields">
+        <td class="field">
+          <a href="/retrieve_user/{{id}}">{{name}} with ID {{id}}</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/if}}

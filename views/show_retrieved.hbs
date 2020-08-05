@@ -1,0 +1,36 @@
+{{> menu }}
+
+{{#unless links}}
+  <h3 class="ui center aligned message">There are no users linked with {{userName}} with ID {{userId}}. Try adding a few!</h3>
+{{/unless}}
+
+{{#if links}}
+<h3>
+  The users linked with {{userName}}, with ID {{userId}} are:
+</h3>
+
+<table class="ui fixed striped table">
+  <thead>
+    <tr>
+      <th class="nine wide">User Name</th>
+      <th class="five wide">User ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each links}}
+      <tr class="fields">
+        <td class="field">
+          <h4>
+            {{name}}
+          </h4>
+        </td>
+        <td class="field">
+        <h4>
+          {{id}}
+        </h4>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/if}}
