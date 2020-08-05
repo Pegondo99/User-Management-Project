@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "11111A",
+      "name": "José Alonso González"
+    },
+    {
+      "id": "22222B",
+      "name": "Manuel Martinez"
+    },
+    {
+      "id": "33333C",
+      "name": "Antonio Herrera"
+    },
+    {
+      "id": "44444D",
+      "name": "Carmen Díaz"
+    },
+    {
+      "id": "55555E",
+      "name": "María Teresa Rodríguez"
+    },
+    {
+      "id": "66666F",
+      "name": "Fabio Díaz"
+    }
+  ]
+}

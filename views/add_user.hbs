@@ -1,0 +1,18 @@
+{{> menu }}
+
+<form class="ui stacked segment form" name="addUser" action="/add_new_user" onsubmit="return verifyAdd()" method="POST" enctype="multipart/form-data">
+  <h3>
+    Add a new user:
+  </h3>
+  <div class="two fields">
+    <div class="field">
+      <label>ID</label>
+      <input placeholder="ID" type="text" name="id" autofocus required>
+    </div>
+    <div class="field">
+      <label>Name</label>
+      <input placeholder="Name" type="text" name="name" required>
+    </div>
+  </div>
+  <button class="ui blue submit button">Add User</button>
+</form>

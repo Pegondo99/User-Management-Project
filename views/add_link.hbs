@@ -1,0 +1,24 @@
+{{> menu}}
+
+{{#unless users}}
+  <h3 class="ui center aligned message">There are no users added to the application yet. Try adding a few!</h3>
+{{/unless}}
+
+{{#if users}}
+<form class="ui stacked segment form" name="usersToLinkForm" action="/add_new_link" method="POST" enctype="multipart/form-data" onsubmit="return verifyLink()">
+  <h3>
+    Choose two users to link:
+  </h3>
+  
+  <fieldset>
+  {{#each users}}
+    <div >
+      <input type="checkbox" id={{id}} name="usersToLink" value={{id}}>
+      <label for={{id}}> {{name}} with id: {{id}} </label>
+    </div>
+  {{/each}}
+  </fieldset>
+  
+  <button class="ui blue submit button" name="button">Add Link</button>
+</form>
+{{/if}}
